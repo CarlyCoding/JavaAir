@@ -1,4 +1,4 @@
-public class Pilot{
+public class Pilot extends Person{
 
     private String name;
     private String rank;
@@ -7,7 +7,7 @@ public class Pilot{
     private String flyPlane;
 
     public Pilot(String name, String rank, String licenseNumber, String flyPlane){
-        this.name = name;
+        super(name);
         this.rank = rank;
         this.licenseNumber = licenseNumber;
         this.flyPlane = flyPlane;
