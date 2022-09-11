@@ -45,13 +45,13 @@ public class Flight {
             this.passengers.add(passenger);
     }
 
-    //    This is the "pilot announcement" signifying the pilot flying the plane
+    //    This is the "pilot announcement" signifying the pilot flying the plane.
     public String getPilotAnnouncement(){
         return this.pilot.getFlyPlane();
     }
 
 
-//    This is the cabin crew message to the passengers
+//    This is the cabin crew message to the passengers.
     public String getCabinCrewAnnouncement(){
         return this.cabinCrewMember.getAnnouncement();
     }
