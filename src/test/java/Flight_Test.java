@@ -11,43 +11,56 @@ public class Flight_Test {
 
 
     @Before
-    public void setUp(){
-        flight = new Flight(Plane.EMBRAER_145,"LER345","LSI","EDI","3PM");
-        flight.addCabinCrewMembers(new CabinCrewMember("Jennifer","Chicken or Beef",Rank.PURSER));
-        flight.addPilot(new Pilot("Kelly",Rank.CAPTAIN,"BN5R4", "Cabin crew seats for landing"));
-        flight.addPassengers(new Passenger("Carly Officer",2));
-        flight.addPassengers(new Passenger("Steven Officer",1));
-        flight.addPassengers(new Passenger("Bella Officer",3));
+    public void setUp() {
+        flight = new Flight(
+                Plane.EMBRAER_145,
+                new Pilot("Kelly", Rank.CAPTAIN, "BN5R4", "Cabin crew seats for landing"),
+                new CabinCrewMember("Jennifer", "Chicken or Beef", Rank.PURSER),
+                "LER345",
+                "LSI", "EDI", "3PM");
+        flight.bookPassengerOnFlight(new Passenger("Carly Officer", 2));
+        flight.bookPassengerOnFlight(new Passenger("Steven Officer", 1));
+        flight.bookPassengerOnFlight(new Passenger("Bella Officer", 3));
     }
 
     @Test
-    public void hasDestination(){
+    public void hasDestination() {
         assertEquals("LSI", flight.getDestination());
     }
 
     @Test
-    public void hasDepartureAirport(){
+    public void hasDepartureAirport() {
         assertEquals("EDI", flight.getDepartureAirport());
     }
 
     @Test
-    public void hasDepartureTime(){
+    public void hasDepartureTime() {
         assertEquals("3PM", flight.getDepartureTime());
     }
 
     @Test
-    public void hasFlightNumber(){
+    public void hasFlightNumber() {
         assertEquals("LER345", flight.getFlightNumber());
     }
 
-//            has departure time
-//
+    @Test
+    public void pilotCanMakeAnnouncement(){
+        assertEquals("Cabin crew seats for landing", flight.getPilotAnnouncement());
+    }
+
+    @Test
+    public void cabinCrewCanMakeAnnouncement(){
+        assertEquals("Chicken or Beef", flight.getCabinCrewAnnouncement());
+    }
+
+    @Test
+    public void hasAvailableSeats(){
+        assertEquals(46, flight.getAvailableSeats());
+    }
 
 
-//    @Test
-//    public void canAddPassengers(){
-//        ArrayList<Passenger> passengers = new ArrayList<~>();
-//        passengers.add(new Passenger("Carly Officer", 2));
-////        Need a size of list checkins here.
-//    }
+
+
+
+
 }
