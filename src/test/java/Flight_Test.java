@@ -9,6 +9,8 @@ public class Flight_Test {
 
     Flight flight;
 
+    Passenger passenger1;
+
 
     @Before
     public void setUp() {
@@ -21,6 +23,7 @@ public class Flight_Test {
         flight.bookPassengerOnFlight(new Passenger("Carly Officer", 2));
         flight.bookPassengerOnFlight(new Passenger("Steven Officer", 1));
         flight.bookPassengerOnFlight(new Passenger("Bella Officer", 3));
+        passenger1 = new Passenger("Ryan Howard", 4);
     }
 
     @Test
@@ -59,8 +62,13 @@ public class Flight_Test {
     }
 
 
+    @Test
+    public void canBookPassengerOnFlight(){
+        flight.bookPassengerOnFlight(passenger1);
+        assertEquals(45, flight.getAvailableSeats());
+    }
 
+    public void cantBookPassengersOnFlight(){
 
-
-
+    }
 }

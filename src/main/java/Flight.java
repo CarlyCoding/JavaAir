@@ -45,7 +45,6 @@ public class Flight {
             this.passengers.add(passenger);
     }
 
-
     //    This is the "pilot announcement" signifying the pilot flying the plane
     public String getPilotAnnouncement(){
         return this.pilot.getFlyPlane();
