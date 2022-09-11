@@ -23,19 +23,34 @@ public class Flight {
         this.departureTime = departureTime;
     }
 
-    public String flightNumber(){
+//    Get the number of seats available on the plane.
+//    Book a passenger, if the seat number is viable.
+
+    public void addPilot(Pilot pilot){
+        this.pilots.add(pilot);
+    }
+
+    public void addCabinCrewMembers(CabinCrewMember cabinCrewMember){
+        this.cabinCrewMembers.add(cabinCrewMember);
+    }
+
+    public void addPassengers(Passenger passenger){
+        this.passengers.add(passenger);
+    }
+
+    public String getFlightNumber(){
         return flightNumber;
     }
 
-    public String destination(){
+    public String getDestination(){
         return destination;
     }
 
-    public String departureAirport(){
+    public String getDepartureAirport(){
         return departureAirport;
     }
 
-    public String departureTime(){
+    public String getDepartureTime(){
         return departureTime;
     }
 
