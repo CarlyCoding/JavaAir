@@ -1,6 +1,6 @@
 public class Pilot extends Person{
 
-    private String name;
+
     private Rank rank;
     private String licenseNumber;
 
@@ -14,7 +14,7 @@ public class Pilot extends Person{
     }
 
     public String getName(){
-        return name;
+        return super.getName();
     }
 
     public Rank getRank(){

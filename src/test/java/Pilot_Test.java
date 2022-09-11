@@ -14,10 +14,10 @@ public class Pilot_Test {
 
 //    Write tests for get name.
 
-//    @Test
-//    public void getName(){
-//        assertEquals("Gerard", pilot.getName());
-//    }
+    @Test
+    public void getName(){
+        assertEquals("Gerard", pilot.getName());
+    }
 
     @Test
     public void hasRank(){
